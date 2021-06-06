@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 import finite_sandpiles as fsp
 
 
-a = np.zeros((5, 5, 5))
+a = np.zeros((5, 5))
 
 xs = []
 ys = []
 
-for iter in range(0, 1000):
+for iter in range(200):
     fsp.add_random(a)
     xs.append(iter)
     ys.append(fsp.topple(a))

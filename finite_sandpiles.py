@@ -1,7 +1,7 @@
 import random
 
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 def topple(piles: np.ndarray):
     cutoff = 2 * piles.ndim
@@ -37,3 +37,11 @@ def add_random(piles: np.ndarray):
     piles_shape = piles.shape
     random_index = [random.randint(0, shape - 1) for shape in piles_shape]
     piles[tuple(random_index)] += 1
+
+if __name__ == "__main__":
+    piles = np.zeros((5, 5))
+    for _ in range(10000):
+        add_random(piles)
+        topple(piles)
+    plt.matshow(piles, vmin=0, vmax=3)
+    plt.show()
