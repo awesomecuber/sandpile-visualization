@@ -41,7 +41,7 @@ def piles_to_arr(piles):
     piles_arr = np.zeros((max_x - min_x + 1))
     for pile_x, pile_size in piles.items():
         piles_arr[pile_x - min_x] = pile_size
-    
+
     return piles_arr
 
 

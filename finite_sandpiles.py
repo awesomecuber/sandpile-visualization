@@ -26,7 +26,7 @@ def topple(piles: np.ndarray):
                 piles[tuple(forward_pile)] += topple_times
                 if piles[tuple(forward_pile)] >= cutoff:
                     coords_to_topple.append(forward_pile)
-            
+
             if backward_pile[dimension] > -1:
                 piles[tuple(backward_pile)] += topple_times
                 if piles[tuple(backward_pile)] >= cutoff:
